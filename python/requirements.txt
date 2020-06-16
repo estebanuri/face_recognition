@@ -1,0 +1,3 @@
+tensorflow==1.14.0
+keras_facenet
+opencv-python
