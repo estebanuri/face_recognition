@@ -131,7 +131,7 @@ def _inception_resnet_block(x, scale, block_type, block_idx,
 
 
 def InceptionResNetV1Norm(input_shape=(160, 160, 3),
-                      classes=512,
+                      classes=128,
                       dropout_keep_prob=0.8,
                       weights_path=None):
     inputs = Input(shape=input_shape)
