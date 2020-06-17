@@ -80,7 +80,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private static final String TF_OD_API_MODEL_FILE = "mobile_face_net.tflite";
 
 
-  private static final String TF_OD_API_LABELS_FILE = "file:///android_asset/mask_labelmap.txt";
+  private static final String TF_OD_API_LABELS_FILE = "file:///android_asset/labelmap.txt";
 
   private static final DetectorMode MODE = DetectorMode.TF_OD_API;
   // Minimum detection confidence to track a detection.
