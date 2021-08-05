@@ -4,7 +4,7 @@ import 'package:recognition_example/pages/register_face_page.dart';
 import 'package:recognition_example/pages/root_page.dart';
 import 'package:recognition_example/router/router_name.dart';
 
-class Router {
+class MyRouter {
   static List<GetPage> pages = [
     GetPage(
       name: RouteName.root,
