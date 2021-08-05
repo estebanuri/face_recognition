@@ -53,6 +53,11 @@ class RootPageController extends GetxController {
     _cameraResult = cameraResult;
     this.name = name;
     update();
+
+    Get.defaultDialog(
+      title: 'Person Registered',
+      middleText: 'You can use the "Detect Page" button',
+    );
   }
 
   void goToDetectPage() {
