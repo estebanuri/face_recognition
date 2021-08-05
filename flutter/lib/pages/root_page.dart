@@ -5,7 +5,7 @@ import 'package:recognition_example/pages/camera_view.dart';
 import 'package:recognition_example/router/router_name.dart';
 
 class RootPageController extends GetxController {
-  CameraResult? _cameraResult;
+  CameraResult? cameraResult;
   String name = 'No Face';
 
   Future<String> askForPersonName() async {
@@ -33,7 +33,7 @@ class RootPageController extends GetxController {
     return name;
   }
 
-  bool canScanFace() => _cameraResult != null;
+  bool canScanFace() => cameraResult != null;
 
   void goToRegisterPage() async {
     String name = await askForPersonName();
@@ -50,7 +50,7 @@ class RootPageController extends GetxController {
 
   void handleCamResult(final String name, dynamic cameraResult) {
     if (cameraResult is! CameraResult) return;
-    _cameraResult = cameraResult;
+    this.cameraResult = cameraResult;
     this.name = name;
     update();
 
