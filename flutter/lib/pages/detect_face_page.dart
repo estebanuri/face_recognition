@@ -16,11 +16,16 @@ class DetectFaceController extends GetxController {
   Future processImage(CameraResult cameraResult) async {
     final isBelowThreshold = await compareMeanRecord(cameraResult.feature);
     if (isBelowThreshold) {
-      name = _rootPageController.name;
+      if (name != _rootPageController.name) {
+        name = _rootPageController.name;
+        update();
+      }
     } else {
-      name = 'Unknown';
+      if (name != 'Unknown') {
+        name = 'Unknown';
+        update();
+      }
     }
-    update();
   }
 
   Future<bool> compareMeanRecord(List<double> feature) async {
