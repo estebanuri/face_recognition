@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:recognition_example/core/view_utils.dart';
 import 'package:recognition_example/router/router_name.dart';
 
 class RootPageController extends GetxController {
@@ -35,6 +36,7 @@ class RootPage extends StatelessWidget {
       padding: const EdgeInsets.all(21),
       children: [
         const Text('No Face Registered'),
+        21.hSpace,
         Container(height: 21),
         ElevatedButton(
           child: const Text('Register Face'),
