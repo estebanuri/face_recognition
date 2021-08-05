@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.3.4
+  flutter_easyloading: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
