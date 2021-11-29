@@ -132,12 +132,17 @@ class ProcessLFWTest {
         return bos.toByteArray()
     }
 
+    // Downloads from the official site, the labeled faces in the wild
+    // dataset, and computes its embeddings.
+    // Results are stored into a SQLite database.
+
     @Test
     fun processLFW() {
 
         val basePath = getContext().filesDir
         val dir = File(basePath, "/lfw")
         if (!dir.exists()) {
+            dir.mkdirs()
             downloadLFW()
         }
         assert(dir.exists())
